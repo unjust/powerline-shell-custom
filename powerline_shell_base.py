@@ -146,13 +146,15 @@ class RepoStats:
             if self[_key]:
                 s = u" {}{} ".format(self.n_or_empty(_key), self.symbols[_key])
                 powerline.append(s, fg, bg)
+        """
+        commenting out to not have the full line
         add('ahead', color.GIT_AHEAD_FG, color.GIT_AHEAD_BG)
         add('behind', color.GIT_BEHIND_FG, color.GIT_BEHIND_BG)
         add('staged', color.GIT_STAGED_FG, color.GIT_STAGED_BG)
         add('not_staged', color.GIT_NOTSTAGED_FG, color.GIT_NOTSTAGED_BG)
         add('untracked', color.GIT_UNTRACKED_FG, color.GIT_UNTRACKED_BG)
         add('conflicted', color.GIT_CONFLICTED_FG, color.GIT_CONFLICTED_BG)
-
+        """
 
 def get_valid_cwd():
     """ We check if the current working directory is valid or not. Typically
